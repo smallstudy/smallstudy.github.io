@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[建筑工程招标投标]]></title>
+      <url>/2023/02/03/ztb/</url>
+      <content type="html"><![CDATA[<h3 id="工程监理招标的评标内容："><a href="#工程监理招标的评标内容：" class="headerlink" title="工程监理招标的评标内容："></a>工程监理招标的评标内容：</h3><blockquote>
+<p><strong>1.工程监理单位的基本素质</strong></p>
+<p><strong>2.工程监理人员的配备</strong></p>
+<p><strong>3.建设工程监理大纲</strong></p>
+<p><strong>4.试验检测仪器设备及其应用能力</strong></p>
+<p><strong>5.建设工程监理费用报价</strong></p>
+</blockquote>
+<h3 id="中华人民共和国招标投标法-选摘"><a href="#中华人民共和国招标投标法-选摘" class="headerlink" title="中华人民共和国招标投标法(选摘)"></a>中华人民共和国招标投标法(选摘)</h3><p>1.招标人不得以不合理的条件限制或者排斥<code>潜在投标人</code>，不得对投标人实行歧视待遇。</p>
+<p>2.招标人设有标底的，标底必须<code>保密</code>。（<code>标底在开标时公布，标底只是评标的参考</code>）</p>
+<p>3.招标人对已经发出的招标文件进行必要的澄清或者修改的，应当在招标文件要求的<code>提交投标文件截止时间至少15日前</code>，以<code>书面形式</code>通知所有招标文件收受人。</p>
+<p>4.依法必须进行招标的项目，自<code>招标文件开始发出之日</code>起至投标人<code>提交投标文件截止之日</code>止，最短<code>不得少于20日</code>。</p>
+<p>5.投标人应当按照招标文件的要求编制投标文件。投标文件应当对招标文件提出的<code>实质性要求和条件</code>作出响应。（实质性要求和条件：项目的价格、计划、技术规范、合同的主要条款）</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 招投标 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[print的打印和输出]]></title>
+      <url>/2023/02/02/print/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>在 Python 中， <code>print</code>可以打印所有变量数据，<br>包括自定义类型。</p>
+</blockquote>
+<blockquote>
+<p>在 2.x 版本中， <code>print</code>是个语句，但在 3.x 中却<br>是个内置函数，并且拥有更丰富的功能。</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="参数选项"><a href="#参数选项" class="headerlink" title="参数选项"></a><strong>参数选项</strong></h1><p>可以用 <code>help(print)</code>来查看 <code>print</code>函数的参数解释。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">print(...) </span><br><span class="line">    print(value, ..., sep=&#x27; &#x27;, end=&#x27;\n&#x27;,fi</span><br><span class="line">le=sys.stdout, flush=False)</span><br><span class="line"> </span><br><span class="line">    Prints the values to a stream, or to s</span><br><span class="line">ys.stdout by default. </span><br><span class="line">    Optional keyword arguments: </span><br><span class="line">    file: a file-like object (stream); def</span><br><span class="line">aults to the current sys.stdout. </span><br><span class="line">    sep: string inserted between values, d</span><br><span class="line">efault a space. </span><br><span class="line">    end: string appended after the last va</span><br><span class="line">lue, default a newline. </span><br><span class="line">    flush: whether to forcibly flush the s</span><br><span class="line">tream.</span><br></pre></td></tr></table></figure>
+<p><strong>value</strong>: 打印的值，可多个</p>
+<p><strong>file</strong>: 输出流，默认是<code>sys.stdout</code></p>
+<p><strong>sep</strong>: 多个值之间的分隔符</p>
+<p><strong>end</strong>: 结束符，默认是换行符 <code>\n</code></p>
+<p><strong>flush</strong>: 是否强制刷新到输出流，默认否</p>
+<h1 id="能打印任意数据"><a href="#能打印任意数据" class="headerlink" title="能打印任意数据"></a><strong>能打印任意数据</strong></h1><p>打印数字、字符串、布尔值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(1024, 10.24, &#x27;hello&#x27;, False) </span><br><span class="line"># 1024 10.24 hello False</span><br></pre></td></tr></table></figure>
+<p>打印列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print([1, 2, 3]) </span><br><span class="line"># [1, 2, 3]</span><br></pre></td></tr></table></figure>
+<p>打印元组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print((1, 2, 3)) </span><br><span class="line"># (1, 2, 3)</span><br></pre></td></tr></table></figure>
+<p>打印字典</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&#123;&#x27;name&#x27;: &#x27;hello&#x27;, &#x27;age&#x27;: 18&#125;) </span><br><span class="line"># &#123;&#x27;name&#x27;: &#x27;hello&#x27;, &#x27;age&#x27;: 18&#125;</span><br></pre></td></tr></table></figure>
+<p>打印集合</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&#123;1, 2, 3&#125;) </span><br><span class="line"># &#123;1, 2, 3&#125;</span><br></pre></td></tr></table></figure>
+<p>打印对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Demo: </span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">demo = Demo() </span><br><span class="line">print(demo)</span><br><span class="line"></span><br><span class="line"># &lt;__main__.Demo object at 0x1005bae80&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a><strong>分隔符</strong></h1><p>默认分隔符是空格， sep 参数可以修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(1, 2, 3, sep=&#x27;-&#x27;) </span><br><span class="line"># 1-2-3</span><br></pre></td></tr></table></figure>
+<h1 id="结束符"><a href="#结束符" class="headerlink" title="结束符"></a><strong>结束符</strong></h1><p>默认结束符是行号， end 参数可以修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(&#x27;第一行&#x27;, end=&#x27;-&#x27;)</span><br><span class="line">print(&#x27;第二行&#x27;) </span><br><span class="line"># 第一行-第二行</span><br></pre></td></tr></table></figure>
+<h1 id="输出重定向"><a href="#输出重定向" class="headerlink" title="输出重定向"></a><strong>输出重定向</strong></h1><p>默认情况下， <code>print</code>函数会将内容打印输出到标准输<br>出流(即 <code>sys.stdout)</code>，可以通过 file 参数自定<br>义输出流。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with open(&#x27;data.log&#x27;, &#x27;w&#x27;) as fileObj: </span><br><span class="line">    print(&#x27;hello world!&#x27;, file=fileObj)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>此时，不会有任何标准输出，但对应的文件中已经有了<br>内容。</p>
+</blockquote>
+<blockquote>
+<p>我们也可以输出到错误输出流，例如：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line"> </span><br><span class="line">print(&#x27;hello world!&#x27;, file=sys.stderr)</span><br></pre></td></tr></table></figure>]]></content>
+      
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[UnblockNeteaseMusic(网易云灰色歌曲播放)手机端使用教程]]></title>
+      <url>/2019/08/07/Music/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>声明:本教程只用作学习交流，请勿作他用，如有侵权，请联系我删除;</p>
+</blockquote>
+<h2 id="1-手机安装终端模拟器"><a href="#1-手机安装终端模拟器" class="headerlink" title="1.手机安装终端模拟器"></a>1.手机安装终端模拟器</h2><p>推荐termux,可以去酷安下载</p>
+<blockquote>
+<p><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/%E8%BD%AF%E4%BB%B6.png?raw=true" alt="avatar"></p>
+<span id="more"></span>
+
+<h2 id="2-termux配置"><a href="#2-termux配置" class="headerlink" title="2.	termux配置"></a>2.	termux配置</h2><p>推荐看这个文章，<a href="https://blog.csdn.net/qq_42471423/article/details/90582792?utm_source=app">Termux配置指南，你要的全都有</a></p>
+</blockquote>
+<h2 id="3-在termux里安装git、node-js"><a href="#3-在termux里安装git、node-js" class="headerlink" title="3.在termux里安装git、node.js"></a>3.在termux里安装git、node.js</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pkg install git      安装git</span><br><span class="line">pkg install nodejs   安装node.js</span><br><span class="line">node -v   查看node.js是否安装成功</span><br><span class="line">git -v     查看git是否安装成功</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/%E5%AE%89%E8%A3%85git%E3%80%81nodejs.png?raw=true" alt="avatar"></p>
+</blockquote>
+<h2 id="4-在termux运行项目"><a href="#4-在termux运行项目" class="headerlink" title="4.	在termux运行项目"></a>4.	在termux运行项目</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/nondanee/UnblockNeteaseMusic.git    下载项目</span><br><span class="line">cd UnblockNeteaseMusic    进项目根目录</span><br><span class="line">node app.js (后台运行)      运行项目</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE.png?raw=true" alt="avatar"></p>
+</blockquote>
+<h2 id="5-改手机接入点apn"><a href="#5-改手机接入点apn" class="headerlink" title="5.改手机接入点apn"></a>5.改手机接入点apn</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">手机设置&gt;&gt;SIM卡和移动网络&gt;&gt;SIM卡&gt;&gt;接入点名称(APN)&gt;&gt;</span><br><span class="line">选一个apn接入点改代理为127.0.0.1端口8080，设置好后使用这个apn接入点</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/apn.png?raw=true" alt="avatar"></p>
+</blockquote>
+<p>打开终端查看是否成功:</p>
+<blockquote>
+<p><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/%E6%95%88%E6%9E%9C.png?raw=true" alt="avatar"></p>
+</blockquote>
+<p>打开网易云查看效果:</p>
+<blockquote>
+<p><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/%E6%95%88%E6%9E%9C2.png?raw=true" alt="avatar"></p>
+</blockquote>
+<p>感谢该项目的作者，<a href="https://github.com/nondanee/UnblockNeteaseMusic">项目地址https://github.com/nondanee/UnblockNeteaseMusic</a><br>其他的使用方法可查看该项目的README</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 音乐 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[上传本地文件到github仓库]]></title>
+      <url>/2018/08/24/github/</url>
+      <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init #初始化本地仓库</span><br><span class="line">git add . #提交本地所有文件到仓库</span><br><span class="line">git commit -m &quot;提交内容&quot; #引号里的是注释内容</span><br><span class="line">git remote add origin git@github.com:youname/youname.git #关联到远程仓库</span><br><span class="line">git pull --rebase origin master #ִ本地文件会有个README.md</span><br><span class="line">git push -u origin master #上传文件</span><br></pre></td></tr></table></figure>
+<p><code>git不能管理空文件，文件夹里必须有文件</code></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[博客多终端同步问题]]></title>
+      <url>/2018/08/01/git-blog/</url>
+      <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h1><p>很多人家里一台笔记本，公司有一台式机，想两个同时<br><code>管理博客</code>，同时达到<code>备份博客</code>主题、文章、配置的<br>目的。下面就介绍一下用<code>github</code>来备份博客并同步博客。</p>
+<span id="more"></span>
+<h1 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a><strong>1.准备工作</strong></h1><blockquote>
+<p>安装了Node.js,Git,Hexo环境<br>完成Github与本地Hexo的对接<br>大家可以参考<a href="http://www.tuicool.com/articles/bAjey26"><code>史上最详细的Hexo博客搭建图文教程</code></a></p>
+</blockquote>
+<h1 id="2-A终端push本地博客文件到github分支"><a href="#2-A终端push本地博客文件到github分支" class="headerlink" title="2.A终端push本地博客文件到github分支"></a><strong>2.A终端push本地博客文件到github分支</strong></h1><h2 id="配置-gitignore文件"><a href="#配置-gitignore文件" class="headerlink" title="配置.gitignore文件"></a><strong>配置.gitignore文件</strong></h2><p>进入博客目录文件夹下，找到文件.gitignore，在最后增加两行内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/.deploy_git</span><br><span class="line">/public</span><br></pre></td></tr></table></figure>
+<h2 id="上传博客文件到远程仓库分支"><a href="#上传博客文件到远程仓库分支" class="headerlink" title="上传博客文件到远程仓库分支"></a><strong>上传博客文件到远程仓库分支</strong></h2><p>执行以下操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git init #初始化本地仓库</span><br><span class="line">git add . #添加目录下所有文件</span><br><span class="line">git commit -m &quot;更新说明&quot; #提交并添加更新说明</span><br><span class="line">git branch hexo #新建hexo分支</span><br><span class="line">git checkout hexo #切换到hexo分支上</span><br><span class="line">git remote add origin git@github.com:yourname/yourname.github.io.git #将本地与Github项目对接</span><br><span class="line">git push origin hexo #push到Github项目的hexo分支上</span><br></pre></td></tr></table></figure>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a><strong>注意事项</strong></h2><p>2.1 git init会在本地文件夹里生成.git文件夹，不要随意进入修改，如果.git增加原本就存在，建议删除后再执行git init<br>2.2 你的博客主题是clone的话，主题配置文件夹里有个.git文件夹，删除它<br>2.3 新建的本地分支名与github项目上的分支名一致</p>
+<h1 id="3-B终端clone和push更新"><a href="#3-B终端clone和push更新" class="headerlink" title="3.B终端clone和push更新"></a><strong>3.B终端clone和push更新</strong></h1><p>此时在B终端更新博客，只需要将Github的hexo分支clone下来，进行初次的相关配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git clone -b hexo git@github.com:yourname/yourname.github.io.git #将Github中hexo分支clone到本地</span><br><span class="line">cd yourname.github.io #切换到刚刚clone的文件夹内</span><br><span class="line">npm install #注意，一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init</span><br><span class="line">hexo new post &quot;文章名&quot; #新建了.md文件，终端上会显示路径，找到文件，编辑完成自己的博客内容</span><br><span class="line">git add . </span><br><span class="line">git commit -m &quot;更新说明&quot;</span><br><span class="line">git push origin hexo #更新分支</span><br><span class="line">hexo d -g #更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master</span><br></pre></td></tr></table></figure>
+<h1 id="4-不同终端的同步管理"><a href="#4-不同终端的同步管理" class="headerlink" title="4.不同终端的同步管理"></a><strong>4.不同终端的同步管理</strong></h1><p>在不同的终端做完配置，就可以分享自己更新的博客，进入自己相应的文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git pull origin hexo #先pull完成本地与远端的融合</span><br><span class="line">hexo new post &quot;文章名&quot; #新建博客文章名字</span><br><span class="line">git add . #提交目录下所有文件</span><br><span class="line">git commit -m &quot;更新说明&quot;</span><br><span class="line">git push origin hexo #更新分支</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p>本文参考以下文章写成:<br><a href="http://www.tuicool.com/articles/bAjey26"><code>可能是最详细的Hexo+GitHub pages搭建个人博客的教程</code></a><br><a href="https://blog.csdn.net/Monkey_LZL/article/details/60870891"><code>如何解决github+Hexo的博客多终端同步问题</code></a><br>你可能还需要了解一下git的基础<a href="http://iissnan.com/progit/"><code>Pro Git简体中文版</code></a></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>

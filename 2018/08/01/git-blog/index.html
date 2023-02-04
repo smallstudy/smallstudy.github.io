@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>博客多终端同步问题 | 行而知天下</title><meta name="author" content="Potato"><meta name="copyright" content="Potato"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言很多人家里一台笔记本，公司有一台式机，想两个同时管理博客，同时达到备份博客主题、文章、配置的目的。下面就介绍一下用github来备份博客并同步博客。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客多终端同步问题">
+<meta property="og:url" content="http://smallstudy.github.io/2018/08/01/git-blog/index.html">
+<meta property="og:site_name" content="行而知天下">
+<meta property="og:description" content="前言很多人家里一台笔记本，公司有一台式机，想两个同时管理博客，同时达到备份博客主题、文章、配置的目的。下面就介绍一下用github来备份博客并同步博客。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/github.png">
+<meta property="article:published_time" content="2018-08-01T04:42:54.000Z">
+<meta property="article:modified_time" content="2023-02-03T16:48:56.192Z">
+<meta property="article:author" content="Potato">
+<meta property="article:tag" content="github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/github.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://smallstudy.github.io/2018/08/01/git-blog/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '博客多终端同步问题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-02-04 00:48:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/头像.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('https://cdn.staticaly.com/gh/smallstudy/picture@master/img/github.png')"><nav id="nav"><span id="blog-info"><a href="/" title="行而知天下"><span class="site-name">行而知天下</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">博客多终端同步问题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-08-01T04:42:54.000Z" title="发表于 2018-08-01 12:42:54">2018-08-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-02-03T16:48:56.192Z" title="更新于 2023-02-04 00:48:56">2023-02-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="博客多终端同步问题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h1><p>很多人家里一台笔记本，公司有一台式机，想两个同时<br><code>管理博客</code>，同时达到<code>备份博客</code>主题、文章、配置的<br>目的。下面就介绍一下用<code>github</code>来备份博客并同步博客。</p>
+<span id="more"></span>
+<h1 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a><strong>1.准备工作</strong></h1><blockquote>
+<p>安装了Node.js,Git,Hexo环境<br>完成Github与本地Hexo的对接<br>大家可以参考<a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/bAjey26"><code>史上最详细的Hexo博客搭建图文教程</code></a></p>
+</blockquote>
+<h1 id="2-A终端push本地博客文件到github分支"><a href="#2-A终端push本地博客文件到github分支" class="headerlink" title="2.A终端push本地博客文件到github分支"></a><strong>2.A终端push本地博客文件到github分支</strong></h1><h2 id="配置-gitignore文件"><a href="#配置-gitignore文件" class="headerlink" title="配置.gitignore文件"></a><strong>配置.gitignore文件</strong></h2><p>进入博客目录文件夹下，找到文件.gitignore，在最后增加两行内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/.deploy_git</span><br><span class="line">/public</span><br></pre></td></tr></table></figure>
+<h2 id="上传博客文件到远程仓库分支"><a href="#上传博客文件到远程仓库分支" class="headerlink" title="上传博客文件到远程仓库分支"></a><strong>上传博客文件到远程仓库分支</strong></h2><p>执行以下操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git init #初始化本地仓库</span><br><span class="line">git add . #添加目录下所有文件</span><br><span class="line">git commit -m &quot;更新说明&quot; #提交并添加更新说明</span><br><span class="line">git branch hexo #新建hexo分支</span><br><span class="line">git checkout hexo #切换到hexo分支上</span><br><span class="line">git remote add origin git@github.com:yourname/yourname.github.io.git #将本地与Github项目对接</span><br><span class="line">git push origin hexo #push到Github项目的hexo分支上</span><br></pre></td></tr></table></figure>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a><strong>注意事项</strong></h2><p>2.1 git init会在本地文件夹里生成.git文件夹，不要随意进入修改，如果.git增加原本就存在，建议删除后再执行git init<br>2.2 你的博客主题是clone的话，主题配置文件夹里有个.git文件夹，删除它<br>2.3 新建的本地分支名与github项目上的分支名一致</p>
+<h1 id="3-B终端clone和push更新"><a href="#3-B终端clone和push更新" class="headerlink" title="3.B终端clone和push更新"></a><strong>3.B终端clone和push更新</strong></h1><p>此时在B终端更新博客，只需要将Github的hexo分支clone下来，进行初次的相关配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git clone -b hexo git@github.com:yourname/yourname.github.io.git #将Github中hexo分支clone到本地</span><br><span class="line">cd yourname.github.io #切换到刚刚clone的文件夹内</span><br><span class="line">npm install #注意，一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init</span><br><span class="line">hexo new post &quot;文章名&quot; #新建了.md文件，终端上会显示路径，找到文件，编辑完成自己的博客内容</span><br><span class="line">git add . </span><br><span class="line">git commit -m &quot;更新说明&quot;</span><br><span class="line">git push origin hexo #更新分支</span><br><span class="line">hexo d -g #更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master</span><br></pre></td></tr></table></figure>
+<h1 id="4-不同终端的同步管理"><a href="#4-不同终端的同步管理" class="headerlink" title="4.不同终端的同步管理"></a><strong>4.不同终端的同步管理</strong></h1><p>在不同的终端做完配置，就可以分享自己更新的博客，进入自己相应的文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git pull origin hexo #先pull完成本地与远端的融合</span><br><span class="line">hexo new post &quot;文章名&quot; #新建博客文章名字</span><br><span class="line">git add . #提交目录下所有文件</span><br><span class="line">git commit -m &quot;更新说明&quot;</span><br><span class="line">git push origin hexo #更新分支</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p>本文参考以下文章写成:<br><a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/bAjey26"><code>可能是最详细的Hexo+GitHub pages搭建个人博客的教程</code></a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/Monkey_LZL/article/details/60870891"><code>如何解决github+Hexo的博客多终端同步问题</code></a><br>你可能还需要了解一下git的基础<a target="_blank" rel="noopener" href="http://iissnan.com/progit/"><code>Pro Git简体中文版</code></a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://smallstudy.github.io">Potato</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://smallstudy.github.io/2018/08/01/git-blog/">http://smallstudy.github.io/2018/08/01/git-blog/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://smallstudy.github.io" target="_blank">行而知天下</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/github/">github</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/github.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2018/08/24/github/" title="上传本地文件到github仓库"><img class="cover" src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/git.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">上传本地文件到github仓库</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2018/08/24/github/" title="上传本地文件到github仓库"><img class="cover" src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/git.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-08-24</div><div class="title">上传本地文件到github仓库</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/头像.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Potato</div><div class="author-info__description">千里之行,始于足下</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/smallstudy"><i class="fab fa-github"></i><span>个人主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">逆水行舟，不进则退.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">1.准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-A%E7%BB%88%E7%AB%AFpush%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%88%B0github%E5%88%86%E6%94%AF"><span class="toc-number">3.</span> <span class="toc-text">2.A终端push本地博客文件到github分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-gitignore%E6%96%87%E4%BB%B6"><span class="toc-number">3.1.</span> <span class="toc-text">配置.gitignore文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%88%86%E6%94%AF"><span class="toc-number">3.2.</span> <span class="toc-text">上传博客文件到远程仓库分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-B%E7%BB%88%E7%AB%AFclone%E5%92%8Cpush%E6%9B%B4%E6%96%B0"><span class="toc-number">4.</span> <span class="toc-text">3.B终端clone和push更新</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E4%B8%8D%E5%90%8C%E7%BB%88%E7%AB%AF%E7%9A%84%E5%90%8C%E6%AD%A5%E7%AE%A1%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">4.不同终端的同步管理</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/02/03/ztb/" title="建筑工程招标投标"><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/ztb.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="建筑工程招标投标"/></a><div class="content"><a class="title" href="/2023/02/03/ztb/" title="建筑工程招标投标">建筑工程招标投标</a><time datetime="2023-02-03T08:35:57.000Z" title="发表于 2023-02-03 16:35:57">2023-02-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/02/print/" title="print的打印和输出"><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/python.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="print的打印和输出"/></a><div class="content"><a class="title" href="/2023/02/02/print/" title="print的打印和输出">print的打印和输出</a><time datetime="2023-02-02T00:42:29.095Z" title="发表于 2023-02-02 08:42:29">2023-02-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/08/07/Music/" title="UnblockNeteaseMusic(网易云灰色歌曲播放)手机端使用教程"><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/网易音乐.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="UnblockNeteaseMusic(网易云灰色歌曲播放)手机端使用教程"/></a><div class="content"><a class="title" href="/2019/08/07/Music/" title="UnblockNeteaseMusic(网易云灰色歌曲播放)手机端使用教程">UnblockNeteaseMusic(网易云灰色歌曲播放)手机端使用教程</a><time datetime="2019-08-06T16:14:11.000Z" title="发表于 2019-08-07 00:14:11">2019-08-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/08/24/github/" title="上传本地文件到github仓库"><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/git.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="上传本地文件到github仓库"/></a><div class="content"><a class="title" href="/2018/08/24/github/" title="上传本地文件到github仓库">上传本地文件到github仓库</a><time datetime="2018-08-24T12:51:04.000Z" title="发表于 2018-08-24 20:51:04">2018-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/08/01/git-blog/" title="博客多终端同步问题"><img src="https://cdn.staticaly.com/gh/smallstudy/picture@master/img/github.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="博客多终端同步问题"/></a><div class="content"><a class="title" href="/2018/08/01/git-blog/" title="博客多终端同步问题">博客多终端同步问题</a><time datetime="2018-08-01T04:42:54.000Z" title="发表于 2018-08-01 12:42:54">2018-08-01</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.staticaly.com/gh/smallstudy/picture@master/img/github.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 By Potato</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
